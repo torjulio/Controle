@@ -1,0 +1,178 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Sistema de Gestão Escolar Zehan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script>
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+        }
+    </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 dark:text-white">
+<div class="flex">
+    <!-- Sidebar -->
+    <div class="w-64 bg-gradient-to-b from-purple-600 to-blue-500 text-white min-h-screen">
+        <div class="flex items-center justify-center py-6">
+            <img alt="Logo of Avalon Ltda" class="rounded-full" height="100"
+                 src="https://storage.googleapis.com/a1aa/image/cZEvdGbWMo4fSqYQayiTP4VM8jJt5XhALiSbJtvVgHL1Iw8JA.jpg"
+                 width="100"/>
+        </div>
+        <nav class="px-6">
+            <ul>
+                <li class="py-2">
+                    <a class="flex items-center hover:text-gray-300" href="#">
+                        <i class="fas fa-tachometer-alt mr-2"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="py-2">
+                    <a class="flex items-center hover:text-gray-300" href="#">
+                        <i class="fas fa-user mr-2"></i>
+                        Cadastro
+                    </a>
+                </li>
+                <li class="py-2">
+                    <a class="flex items-center hover:text-gray-300" href="#">
+                        <i class="fas fa-book mr-2"></i>
+                        Pedagógico
+                    </a>
+                </li>
+                <li class="py-2">
+                    <a class="flex items-center hover:text-gray-300" href="#">
+                        <i class="fas fa-dollar-sign mr-2"></i>
+                        Cobranças
+                    </a>
+                </li>
+                <li class="py-2">
+                    <a class="flex items-center hover:text-gray-300" href="#">
+                        <i class="fas fa-file-alt mr-2"></i>
+                        Relatórios
+                    </a>
+                </li>
+                <ul class="pl-4">
+                    <li class="py-2">
+                        <a class="flex items-center hover:text-gray-300" href="#">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            Matrículas
+                        </a>
+                    </li>
+                    <li class="py-2">
+                        <a class="flex items-center hover:text-gray-300" href="#">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            Matrículas Canceladas
+                        </a>
+                    </li>
+                    <li class="py-2">
+                        <a class="flex items-center hover:text-gray-300" href="#">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            Frequência Escolar
+                        </a>
+                    </li>
+                    <li class="py-2">
+                        <a class="flex items-center hover:text-gray-300" href="#">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            Evasão Escolar
+                        </a>
+                    </li>
+                    <li class="py-2">
+                        <a class="flex items-center hover:text-gray-300" href="#">
+                            <i class="fas fa-file-alt mr-2"></i>
+                            Faturamento e Inadimplências
+                        </a>
+                    </li>
+                </ul>
+                <li class="py-2">
+                    <a class="flex items-center hover:text-gray-300" href="#">
+                        <i class="fas fa-cash-register mr-2"></i>
+                        Caixa
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- Main Content -->
+    <div class="flex-1 p-6">
+        <header class="flex justify-between items-center mb-6">
+            <h1 class="text-2xl font-bold text-blue-700 dark:text-blue-300">Sistema de Gestão Escolar Zehan</h1>
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-bell text-gray-600 dark:text-gray-300"></i>
+                <span class="text-gray-600 dark:text-gray-300">admin</span>
+                <button onclick="toggleTheme()" class="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 px-2 py-1 rounded">
+                    <i class="fas fa-adjust"></i>
+                </button>
+                <i class="fas fa-power-off text-red-600"></i>
+            </div>
+        </header>
+        <div class="bg-white dark:bg-gray-800 p-6 rounded shadow">
+            <h2 class="text-xl font-semibold mb-4">Relatório de Frequência Escolar</h2>
+            <div class="border-b mb-4">
+                <ul class="flex">
+                    <li class="mr-4 pb-2 border-b-2 border-blue-500">
+                        <a class="text-blue-500" href="#">Presenças e Faltas</a>
+                    </li>
+                    <li class="pb-2">
+                        <a class="text-gray-500 dark:text-gray-400" href="#">Alunos que Pararam de Frequentar Aulas</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
+                <div>
+                    <label class="block text-gray-700 dark:text-gray-300" for="unidade">Unidade:</label>
+                    <select class="w-full border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-300" id="unidade">
+                        <option>-- TODAS --</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700 dark:text-gray-300" for="periodo">Período Letivo:</label>
+                    <select class="w-full border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-300" id="periodo">
+                        <option>-- SELECIONE --</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700 dark:text-gray-300" for="turma">Turma:</label>
+                    <select class="w-full border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-300" id="turma">
+                        <option>-- TODAS --</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700 dark:text-gray-300" for="disciplina">Disciplina:</label>
+                    <select class="w-full border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-300" id="disciplina">
+                        <option>-- TODAS --</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-gray-700 dark:text-gray-300" for="data-inicial">Data Inicial:</label>
+                    <input class="w-full border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-300" id="data-inicial" type="date" value="2024-01-01"/>
+                </div>
+                <div>
+                    <label class="block text-gray-700 dark:text-gray-300" for="data-final">Data Final:</label>
+                    <input class="w-full border-gray-300 dark:border-gray-600 rounded bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-300" id="data-final" type="date" value="2024-12-31"/>
+                </div>
+            </div>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Listar Alunos</button>
+            <div class="mt-6">
+                <table class="w-full border-collapse border border-gray-300 dark:border-gray-600">
+                    <thead>
+                    <tr class="bg-gray-200 dark:bg-gray-700">
+                        <th class="border border-gray-300 dark:border-gray-600 px-4 py-2">Matrícula</th>
+                        <th class="border border-gray-300 dark:border-gray-600 px-4 py-2">Nome do Aluno(a)</th>
+                        <th class="border border-gray-300 dark:border-gray-600 px-4 py-2">Código da Turma</th>
+                        <th class="border border-gray-300 dark:border-gray-600 px-4 py-2">Nome da Unidade</th>
+                        <th class="border border-gray-300 dark:border-gray-600 px-4 py-2">Nome da Disciplina</th>
+                        <th class="border border-gray-300 dark:border-gray-600 px-4 py-2">Presenças</th>
+                        <th class="border border-gray-300 dark:border-gray-600 px-4 py-2">Faltas</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- Add rows here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
